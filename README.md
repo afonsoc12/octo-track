@@ -1,5 +1,9 @@
 # 🐙 OctoTrack
 
+[![Build](https://img.shields.io/github/actions/workflow/status/afonsoc12/octo-track/release.yml?label=Build&logo=githubactions&logoColor=white)](https://github.com/afonsoc12/octo-track/actions/workflows/release.yml)
+[![Version](https://img.shields.io/github/v/release/afonsoc12/octo-track?label=version&color=green&logo=git&logoColor=white)](https://github.com/afonsoc12/octo-track/releases/latest)
+[![Stars](https://img.shields.io/github/stars/afonsoc12/octo-track?logo=github&logoColor=black&color=white)](https://github.com/afonsoc12/octo-track/stargazers)
+
 > ⚡ Electricity usage dashboard for [Octopus Energy](https://octopus.energy/) customers — no database required.
 
 **OctoTrack** is a Streamlit dashboard that fetches your electricity consumption and tariff data live from the Octopus Energy API. Just drop in your API key and go.
@@ -37,8 +41,8 @@ docker compose up
 ### Local (Python ≥ 3.14 + uv)
 
 ```bash
-uv sync --locked --all-groups
-uv run --env-file .env python -m octo_track dashboard
+uv sync --locked
+uv run --env-file .env octo-track
 ```
 
 ## ⚙️ Configuration
@@ -51,7 +55,7 @@ All configuration is via environment variables. Only `OCTOPUS_API_KEY` is requir
 |---|---|---|
 | `OCTOPUS_API_KEY` | Octopus Energy API key | `sk_live_...` |
 
-Get your API key from [Octopus Energy → Personal details → API access](https://octopus.energy/dashboard/new/accounts/personal-details/api-access).
+Get your API key from [Octopus Energy](https://octopus.energy/dashboard/new/accounts/personal-details/api-access).
 
 All meter points, tariffs, and account info are auto-discovered from the API key. No other credentials needed.
 
@@ -61,7 +65,7 @@ All meter points, tariffs, and account info are auto-discovered from the API key
 |---|---|---|
 | `CACHE_DIR` | Directory for parquet cache files | `/data/cache` |
 
-Cache is permanent — cleared only when you hit **↺ Refresh** in the dashboard.
+Cache is permanent by default — cleared only when you hit **↺ Refresh** in the dashboard.
 
 ### 🎛️ Streamlit
 
@@ -119,7 +123,7 @@ docker run \
 
 - [ ] Server mode — background job that fetches data automatically (asyncio/scheduler)
 - [ ] More sidebar account info — postcode, town, current tariff, move-in date
-- [ ] Integration tests
+- [ ] Integration with [Octopus Home Mini](https://octopus.energy/blog/octopus-home-mini/)
 - [ ] Combine GraphQL + REST APIs into unified client
 
 ## 📄 License

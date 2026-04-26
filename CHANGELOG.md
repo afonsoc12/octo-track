@@ -7,11 +7,16 @@ and this project adheres to [Semantic Versioning].
 
 ## [Unreleased]
 
-- Unreleased content
+## [0.0.1] - 2026-04-26
 
-## [0.0.1] - 2026-04-25
+### Added
 
-- Initial release
+- 📊 Monthly overview — daily consumption and cost breakdown with Ofgem SVT price cap comparison
+- ⏱️ Half-hourly detail — 30-minute interval analysis with rate and cost per slot
+- ⚡ Agile rates — live Agile tariff visualisation, rate bands, and cost comparison vs current tariff
+- 🔍 Auto-discovery — account, meter points, and tariff history resolved from API key alone
+- 💾 Parquet cache — API responses cached to disk, cleared via Refresh button
+- 🐳 Docker image — multi-stage build, non-root user, single env var to run
 
 <!-- Links -->
 
@@ -20,5 +25,5 @@ and this project adheres to [Semantic Versioning].
 
 <!-- Versions -->
 
-[unreleased]: https://github.com/afonsoc12/afonsoc12.github.io/compare/v0.0.1...HEAD
-[0.0.1]: https://github.com/afonsoc12/afonsoc12.github.io/releases/tag/v0.0.1
+[unreleased]: https://github.com/afonsoc12/octo-track/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/afonsoc12/octo-track/releases/tag/v0.0.1

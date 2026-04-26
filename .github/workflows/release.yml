@@ -12,12 +12,13 @@ on:
 
 jobs:
   ci:
-    name: CI
+    name: 🔍 CI
     uses: ./.github/workflows/ci.yml
 
   github-release:
     name: 📦 GitHub Release
     needs: ci
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
       contents: write

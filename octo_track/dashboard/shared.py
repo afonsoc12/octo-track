@@ -39,10 +39,6 @@ def refresh_button() -> None:
 def meter_selector() -> tuple[str, str]:
     """Sidebar MPAN/meter dropdown. Returns (mpan, meter_sn)."""
     with st.sidebar:
-        st.caption(
-            "Mode: ☁️ Stateless (API)",
-            help="Data fetched from the Octopus API in real time and cached locally. No database required.",
-        )
         st.markdown("### Meter")
         try:
             account_info = fetch_account_data()
@@ -85,7 +81,12 @@ def meter_selector() -> tuple[str, str]:
 
         st.sidebar.markdown("---")
         version = importlib.metadata.version("octo-track")
-        st.caption(f"octo-track v{version}")
+        st.caption("Mode: ☁️ Stateless (API)", help="Data fetched from the Octopus API in real time and cached locally. No database required.")
+        st.caption(
+            f"[octo-track](https://github.com/afonsoc12/octo-track)@"
+            f"[v{version}](https://github.com/afonsoc12/octo-track/releases/tag/v{version})"
+        )
+        st.caption("Made with 🤖 by [Afonso Costa](https://github.com/afonsoc12)")
 
     return mp["mpan"], mp["meter_sn"]
 

@@ -18,15 +18,15 @@ Key constraints:
 uv sync --locked --all-groups
 
 # Run the dashboard (with env vars from .env)
-uv run --env-file .env python -m octo_track dashboard
+uv run --env-file .env octo-track dashboard
 
 # Linting and formatting
-uv run ruff format octo_track test          # auto-fix
+uv run ruff format octo_track test        # auto-fix
 uv run ruff format --check octo_track test  # CI check
-uv run ruff check octo_track test
+uv run ruff check --fix octo_track test
 
 # Tests
-uv run pytest test/test_octopus.py -v
+uv run pytest -m "not integration" -v
 ```
 
 ## Architecture
@@ -69,7 +69,7 @@ octo_track/
 | Variable | Purpose |
 |---|---|
 | `OCTOPUS_API_KEY` | API auth (used as HTTP Basic username) — only required var |
-| `CACHE_DIR` | Parquet cache directory (default `/data/cache`) |
+| `CACHE_DIR` | Parquet cache directory (default `./data/cache`, Docker: `/data/cache`) |
 | `LOG_LEVEL` | Logging verbosity (default `INFO`) |
 | `LOG_FORMAT` | `text` or `logfmt` (default `text`) |
 

@@ -13,7 +13,7 @@ from pathlib import Path
 
 import pandas as pd
 
-CACHE_DIR = Path(os.getenv("CACHE_DIR", "/data/cache"))
+CACHE_DIR = Path(os.getenv("CACHE_DIR", "./data/cache"))
 
 
 def load_or_fetch(key: str, fetch_fn: Callable[[], pd.DataFrame]) -> pd.DataFrame:
