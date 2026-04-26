@@ -82,10 +82,7 @@ def meter_selector() -> tuple[str, str]:
         st.sidebar.markdown("---")
         version = importlib.metadata.version("octo-track")
         st.caption("Mode: ☁️ Stateless (API)", help="Data fetched from the Octopus API in real time and cached locally. No database required.")
-        st.caption(
-            f"[octo-track](https://github.com/afonsoc12/octo-track)@"
-            f"[v{version}](https://github.com/afonsoc12/octo-track/releases/tag/v{version})"
-        )
+        st.caption(f"[octo-track](https://github.com/afonsoc12/octo-track)@[v{version}](https://github.com/afonsoc12/octo-track/releases/tag/v{version})")
         st.caption("Made with 🤖 by [Afonso Costa](https://github.com/afonsoc12)")
 
     return mp["mpan"], mp["meter_sn"]
