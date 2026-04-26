@@ -1,0 +1,10 @@
+- [ ] Unit tests
+- [ ] Integration tests
+- [ ] Combine APIs, decide graphql vs rest
+- [ ] Stateless mode
+- [ ] Bake streamlit in docker
+- [ ] Quickmode (only API_KEY provide + stateless)
+- [ ] Server mode, where it feches data, support for jobs/asyncio to get data automatically
+- [ ] Codecov, proper CI
+- [ ] Versioning
+- [ ] Readme (and/or docs)
