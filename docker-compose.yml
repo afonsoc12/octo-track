@@ -1,0 +1,17 @@
+services:
+
+  dashboard:
+    build: .
+    environment:
+      OCTOPUS_API_KEY: ${OCTOPUS_API_KEY}
+      CACHE_DIR: /data/cache
+      LOG_LEVEL: debug
+      LOG_FORMAT: text
+    volumes:
+      - octo-cache:/data
+    ports:
+      - 8501:8501"
+    restart: unless-stopped
+
+volumes:
+  octo-cache:
