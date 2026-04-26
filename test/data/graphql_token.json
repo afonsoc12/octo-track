@@ -1,0 +1,7 @@
+{
+    "data": {
+        "obtainKrakenToken": {
+            "token": "mock-kraken-jwt-token-000000000000"
+        }
+    }
+}

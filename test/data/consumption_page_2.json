@@ -1,0 +1,17 @@
+{
+    "count": 4,
+    "next": null,
+    "previous": "https://api.octopus.energy/v1/electricity-meter-points/mock_e_mpan/meters/mock_e_sn/consumption/?order_by=period&page_size=2",
+    "results": [
+        {
+            "consumption": 0.060,
+            "interval_start": "2024-01-16T00:30:00Z",
+            "interval_end": "2024-01-16T01:00:00Z"
+        },
+        {
+            "consumption": 0.017,
+            "interval_start": "2024-01-16T01:00:00Z",
+            "interval_end": "2024-01-16T01:30:00Z"
+        }
+    ]
+}

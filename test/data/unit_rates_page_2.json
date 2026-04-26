@@ -1,0 +1,19 @@
+{
+    "count": 4,
+    "next": null,
+    "previous": "https://api.octopus.energy/v1/products/AGILE-24-10-01/electricity-tariffs/E-1R-AGILE-24-10-01-A/standard-unit-rates/",
+    "results": [
+        {
+            "value_exc_vat": 19.0,
+            "value_inc_vat": 19.95,
+            "valid_from": "2024-01-16T00:30:00Z",
+            "valid_to": "2024-01-16T01:00:00Z"
+        },
+        {
+            "value_exc_vat": 20.0,
+            "value_inc_vat": 21.00,
+            "valid_from": "2024-01-16T01:00:00Z",
+            "valid_to": "2024-01-16T01:30:00Z"
+        }
+    ]
+}

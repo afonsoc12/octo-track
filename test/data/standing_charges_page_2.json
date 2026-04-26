@@ -1,0 +1,13 @@
+{
+    "count": 2,
+    "next": null,
+    "previous": "https://api.octopus.energy/v1/products/AGILE-24-10-01/electricity-tariffs/E-1R-AGILE-24-10-01-A/standing-charges/",
+    "results": [
+        {
+            "value_exc_vat": 42.00,
+            "value_inc_vat": 44.10,
+            "valid_from": "2024-03-01T00:00:00Z",
+            "valid_to": null
+        }
+    ]
+}
